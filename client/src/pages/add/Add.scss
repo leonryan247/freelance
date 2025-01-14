@@ -1,0 +1,121 @@
+.add {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0; /* Add vertical padding for better spacing */
+
+  .container {
+    max-width: 1400px;
+    width: 100%;
+    padding: 50px 20px; /* Add horizontal padding for responsive design */
+    box-sizing: border-box;
+
+    h1 {
+      margin-bottom: 30px;
+      color: #333; /* Darken the color for better readability */
+      font-weight: 300;
+      font-size: 2rem; /* Make h1 slightly larger for better emphasis */
+    }
+
+    .sections {
+      display: flex;
+      justify-content: space-between;
+      gap: 50px; /* Reduce the gap between sections for more compact layout */
+      flex-wrap: wrap; /* Ensure responsiveness when the screen size is smaller */
+
+      label {
+        color: #666; /* Lighter gray for label */
+        font-size: 1rem; /* Use rem for better scalability */
+      }
+
+      .info,
+      .details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Increase gap for better spacing */
+        justify-content: space-between;
+
+        input,
+        select,
+        textarea {
+          padding: 15px;
+          border-radius: 8px; /* Add rounded corners for better aesthetics */
+          border: 1px solid #ccc; /* Light border for inputs */
+          font-size: 1rem; /* Consistent font size for inputs */
+          box-sizing: border-box;
+        }
+
+        textarea {
+          resize: vertical; /* Allow textarea resizing only vertically */
+        }
+
+        .images {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          .imagesInputs {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+          }
+        }
+
+        button {
+          padding: 15px 30px; /* Make button padding more uniform */
+          color: white;
+          font-weight: 500;
+          font-size: 1rem; /* Adjust font size for better readability */
+          background-color: #1dbf73;
+          border-radius: 8px;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #17a75e; /* Slightly darker shade for hover */
+          }
+        }
+
+        .add {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          input {
+            width: 80%;
+            padding: 12px;
+            border-radius: 8px; /* Add rounded corners to inputs */
+            border: 1px solid #ccc;
+          }
+        }
+
+        .addedFeatures {
+          display: flex;
+          gap: 15px;
+          flex-wrap: wrap; /* Allow buttons to wrap in smaller screens */
+
+          button {
+            height: 30px;
+            font-size: 12px;
+            font-weight: 400;
+            background: transparent;
+            color: red;
+            border: 1px solid red;
+            border-radius: 4px; /* Rounded corners for feature buttons */
+            padding: 5px 10px; /* Add padding for better clickability */
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background-color: red;
+              color: white; /* Inverse color scheme on hover */
+            }
+          }
+        }
+      }
+    }
+  }
+}
